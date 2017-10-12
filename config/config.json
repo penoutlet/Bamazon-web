@@ -1,0 +1,20 @@
+{
+"local": {
+  "username": "root",
+  "password": "root",
+  "host": "localhost",
+  "port": 3000,
+  "database": "Bamazon",
+  "dialect": "mysql2"
+},
+
+"development": {
+"username": "ie11e64am5aazhjs",
+"password": "koy945rahsemqjkz",
+"host": "d6q8diwwdmy5c9k9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+"database": "q5i3p3z29lyicewk",
+"port": 3306,
+"dialect":"mysql"
+
+}
+}

@@ -1,0 +1,42 @@
+{
+  "name": "bamazon-web",
+  "version": "1.0.0",
+  "description": "Browse, purchase and add products to Bamazon. ",
+  "main": "Bamazon.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/penoutlet/Bamazon-web.git"
+  },
+  "author": "Sam Jones",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/penoutlet/Bamazon-web/issues"
+  },
+  "homepage": "https://github.com/penoutlet/Bamazon-web#readme",
+  "dependencies": {
+    "babble": "^0.11.0",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.18.2",
+    "bootstrap": "^4.0.0-beta",
+    "create-react-class": "^15.6.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "fs": "0.0.1-security",
+    "method-override": "^2.3.10",
+    "morgan": "^1.9.0",
+    "mysql2": "^1.4.2",
+    "path": "^0.12.7",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "sequelize": "^4.13.8",
+    "webpack": "^3.7.1"
+  }
+}
