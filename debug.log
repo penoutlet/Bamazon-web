@@ -1,0 +1,4 @@
+[1012/133710.124:ERROR:process_info.cc(632)] range at 0x8f3744f000000000, size 0x1bc fully unreadable
+[1012/133710.164:ERROR:process_info.cc(632)] range at 0x8f37455400000000, size 0x1bc fully unreadable
+[1012/133710.164:ERROR:process_info.cc(632)] range at 0x0, size 0x1bc fully unreadable
+[1012/133720.718:ERROR:scoped_process_suspend.cc(39)] NtResumeProcess: An attempt was made to access an exiting process.  (0xc000010a)

@@ -1,0 +1,56 @@
+<ul class="nav nav-tabs">
+	<li class="nav-item">
+		<a class="nav-link active" href="/">Shop</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="/managersignin">Manager</a>
+	</li>
+</ul>
+
+<button id='show-add-form-button' class='btn btn-primary'> Add </button>
+<form  id = 'add-form' class ="create-update-form" action = "/products" method = 'POST'>
+	 <button id='hide-add-form-button' class='btn btn-warning'>Hide </button>
+	<div class = 'form-group'>
+		<label for = 'product'>    Product    </label>
+		<input type="text" class="form-control" placeholder="product_name" id = 'user' name = 'product_name'>
+		<input type='text' class='form-control' placeholder='department' id = 'user' name = 'department'>
+		<input type='text' class='form-control' placeholder='price' id = 'user' name = 'price'>
+		<input type='text' class='form-control' placeholder='stock' id = 'user' name = 'stock_quantity'>
+
+		<button type="submit" class="btn btn-info" id = 'add-button'> Add product </button>
+
+		</div>
+	</form>
+<button id= 'show-table-button' class='btn btn-danger'> Edit database </button>
+		<table state='hidden' id ='manager-table' class="table table-striped">
+		    <thead>
+		      <tr>
+		        <th>Product Name</th>
+		        <th>Price</th>
+		        <th>Stock</th>
+						<th> Department </th>
+		      </tr>
+		    </thead>
+					{{#each product}}
+					<tbody>
+
+		      <tr>
+		        <td>{{product_name}}</td>
+		        <td>{{price}}</td>
+		        <td>{{stock_quantity}}</td>
+						<td>{{department}}</td>
+						<td>
+							<form action='/products{{this.id}}?_method=DELETE' method='POST'>
+							<button type='submit'> Delete </button>
+						</form>
+						<form action='/products{{this.id}}?_method=PUT' method='POST'>
+							<button type="submit" name="button"> Update </button>
+						</form>
+					</td>
+		      </tr>
+					</tbody>
+
+					{{/each}}
+		  </table>
+
+			<script href='./../js/js.js'> </script>

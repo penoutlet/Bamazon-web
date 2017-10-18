@@ -9,9 +9,9 @@ module.exports = function(sequelize, DataTypes){
     type:DataTypes.INTEGER,
     allowNull: false
   },
-    stock: {
+    stock_quantity: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: false
     },
 
       department: {
