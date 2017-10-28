@@ -1,34 +1,12 @@
-	<ul class="nav nav-tabs">
-		<a class="navbar-brand" href="/"> Bamazon </a>
-	<li class="nav-item">
-		<a class="nav-link active" href="/">Shop</a>
-	</li>
-	<li class="nav-item">
-		<a class="nav-link" href="/managersignin">Manager</a>
-	</li>
-</ul>
+<div class="jumbotron" text-align='center'>
+<h1>Bamazon!</h1>
+<a href='/shop'> <button class='btn btn-warning'> Shop </button> </a>
+<a href='/sell'> <button class='btn btn-primary'> Sell </button> </a>
 
-<table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Product Name</th>
-        <th>Price</th>
-        <th>Stock</th>
-				<th> Department </th>
-      </tr>
-    </thead>
-			{{#each product}}
-			<tbody>
+<link ref='style/css' href='../assets/css/indexstyle.css'>
 
-      <tr>
-        <td>{{product_name}}</td>
-        <td>{{price}}</td>
-        <td>{{stock_quantity}}</td>
-				<td>{{department}}</td>
-
-      </tr>
-			</tbody>
-
-			{{/each}}
-  </table>
-</div>
+<style>
+.jumbotron{
+  background-color: white;
+  text-align: center;
+}

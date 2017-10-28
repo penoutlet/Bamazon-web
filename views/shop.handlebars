@@ -1,0 +1,58 @@
+	<ul class="nav nav-tabs">
+		<a class="navbar-brand" href="/"> Bamazon </a>
+	<li class="nav-item">
+		<a class="nav-link active" href="/">Shop</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="/managersignin">Manager</a>
+	</li>
+</ul>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Product Name</th>
+				<th> </th>
+        <th>Price</th>
+        <th>Stock</th>
+				<th> Department </th>
+				<th> Seller </th>
+      </tr>
+    </thead>
+			<tbody>
+				{{#each product}}
+
+      <tr>
+        <td>{{product_name}}</td>
+				<td> <button class='btn btn-warning'> Buy </button>
+        <td>{{price}}</td>
+        <td>{{stock_quantity}}</td>
+				<td>{{department}}</td>
+				<td> Rufus Fartpants </td>
+
+      </tr>
+			{{/each}}
+			<tr>
+				<td>Zelda: Oracle of Seasons</td>
+				<td> <button class='btn btn-warning'> Buy </button>
+				<td>	$30	</td>
+				<td>	10	</td>
+				<td> Video Games </td>
+				<td> Rufus Fartpants </td>
+
+			</tr>
+			<tr>
+				<td>Zelda: Oracle of Ages</td>
+				<td> <button class='btn btn-warning'> Buy </button>
+				<td>	$30	</td>
+				<td>	10	</td>
+				<td> Video Games </td>
+				<td> Doofus Fartpants </td>
+
+			</tr>
+
+			</tbody>
+
+
+  </table>
+</div>

@@ -3,7 +3,9 @@ var express = require('express');
 var app = express.Router();
 var bcrypt = require('bcrypt');
 var bodyParser = require('body-parser');
-
+var morgan = require('morgan');
+// morgan
+app.use(morgan('dev'));
 
 module.exports = (app)=> {
 
@@ -16,9 +18,13 @@ module.exports = (app)=> {
 
 // index
 app.get('/', (req,res)=>{
+  res.render('index');
+})
+// shop
+app.get('/shop', (req,res)=>{
   db.products.findAll({})
     .then((product)=>{
-      res.render('index', {product});
+      res.render('shop', {product});
     });
 });
 
@@ -51,23 +57,21 @@ app.post('/products', (req,res)=>{
     .create({product_name: req.body.product_name, department:req.body.department, price: req.body.price,
     stock_quantity: req.body.stock_quantity})
     .then((response)=>{
-      console.log(req.body +'product successfully added.');
+      console.log('Product successfully added.');
       res.redirect('/manager')
     });
 });
 
 // delete
-app.delete('/products:id', (req,res)=>{
-  console.log(req.params.id)
-  db.products
-    .findAll({where:{id:req.params.id}})
-    .then((response)=>{
-    db.products.destroy({where: {id: req.params.id}})
+app.delete('/products/:id', (req,res)=>{
+
+    db.products.destroy({where: {id:req.params.id}})
     .then((response)=>{
       console.log(response);
+      // res.send('Item successfully deleted. Redirecting...')
+      // setTimeout(res.redirect('/manager'),3000);
       res.redirect('/manager');
     });
-});
 });
 
 //update

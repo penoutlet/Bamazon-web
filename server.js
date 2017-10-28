@@ -1,10 +1,9 @@
-var morgan = require('morgan');
 var methodOverride = require('method-override');
 var exphbs = require('express-handlebars')
 var db = require('./models');
 var express = require('express');
 var app = express();
-var port = 3000;
+var port = 3001;
 require('./controllers/routes.js')(app);
 
 
@@ -18,8 +17,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 
-// morgan
-app.use(morgan('dev'));
+
 
 console.log('Bamazon ready to go. ')
 
