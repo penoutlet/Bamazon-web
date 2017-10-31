@@ -35,10 +35,11 @@ app.get('/managersignin',(req,res)=>{
 
 // display products in manager's view
 app.get('/manager', (req,res)=>{
-  db.products.findAll({})
-    .then((product)=>{
-      res.render('manager', {product});
-    });
+      db.products.findAll({})
+        .then((product)=>{
+          res.render('manager', {product});
+        });
+
 });
 
 // route to products in plain json
@@ -90,6 +91,7 @@ app.put('products/:id', (req,res)=>{
 
 //create new manager
 app.post('/users', (req,res)=> {
+
   var saltRounds = 10;
     bcrypt.genSalt(saltRounds, (err,salt)=> {
       bcrypt.hash(req.body.password, salt, (err,hash)=> {
