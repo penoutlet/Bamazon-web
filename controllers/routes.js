@@ -105,5 +105,11 @@ app.post('/users', (req,res)=> {
     });
 });
 
+app.get('/users', (req,res)=> {
+  db.User.find()
+          .then((users)=>{
+            res.json(users)
+          });
+});
 
 };

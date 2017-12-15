@@ -1,7 +1,7 @@
 	<ul class="nav nav-tabs">
 		<a class="navbar-brand" href="/"> Bamazon </a>
 	<li class="nav-item">
-		<a class="nav-link active" href="/">Shop</a>
+		<a class="nav-link active" href="/shop">Shop</a>
 	</li>
 	<li class="nav-item">
 		<a class="nav-link" href="/managersignin">Manager</a>
@@ -38,16 +38,16 @@
 				<td>	$30	</td>
 				<td>	10	</td>
 				<td> Video Games </td>
-				<td> Rufus Fartpants </td>
+				<td> Rufus Mcgee </td>
 
 			</tr>
 			<tr>
 				<td>Zelda: Oracle of Ages</td>
-				<td> <button class='btn btn-warning'> Buy </button>
+				<td> <button id='buy-button' class='btn btn-warning'> Buy </button>
 				<td>	$30	</td>
 				<td>	10	</td>
 				<td> Video Games </td>
-				<td> Doofus Fartpants </td>
+				<td> Doofus McGee </td>
 
 			</tr>
 
@@ -56,3 +56,6 @@
 
   </table>
 </div>
+<script>
+$('buy-button').on('click', function(){
+	alert("This button doesn't do anything...yet!")})
