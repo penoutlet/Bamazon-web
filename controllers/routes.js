@@ -112,4 +112,7 @@ app.get('/users', (req,res)=> {
           });
 });
 
+app.get('/sell', (req,res)=>{
+  res.send('This page is under way!')
+});
 };
