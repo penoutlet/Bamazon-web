@@ -3,7 +3,7 @@ var exphbs = require('express-handlebars')
 var db = require('./models');
 var express = require('express');
 var app = express();
-var port = process.env || 3001;
+var port = process.ENV || 3001;
 require('./controllers/routes.js')(app);
 
 
